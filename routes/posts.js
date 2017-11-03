@@ -5,7 +5,7 @@ let checkLogin = require('../middlewares/check').checkLogin
 
 // 所有用户或者特定用户的文章页
 router.get('/', (req, res, next) => {
-    res.send(req.flash())
+    res.render('posts')
 })
 
 // 发表一篇文章
