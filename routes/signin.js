@@ -30,7 +30,10 @@ router.post('/', checkNotLogin, (req, res, next) => {
 
             // 写入session
             delete user.password
-            req.session.user = userModel
+            req.session.user = user
+
+            console.log('++++++++++++++++++++++')
+            console.log(req.session)
 
             // 跳转到主页
             res.redirect('/posts')
