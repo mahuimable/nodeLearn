@@ -19,8 +19,12 @@ var devMiddleware = require('webpack-dev-middleware')(compiler, {
     }
 })
 
+// 调用webpack-hot-middleware中间件
+var hotMiddleware = require('webpack-hot-middleware')(compiler)
+
 // 注册中间件
 app.use(devMiddleware)
+// app.use(hotMiddleware)
 
 //监听8888端口，开启服务器
 app.listen(8888, (err) => {

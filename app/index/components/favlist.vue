@@ -16,7 +16,7 @@
 </script>
 
 <style>
-    html{
+    html {
         background: #f0f0f0;
     }
 </style>
