@@ -2,8 +2,10 @@ var path = require('path')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-    // 入口文件
-    entry: ['webpack-hot-middleware/client', path.resolve(__dirname, '../app/index/index.js')],
+    // 入口文件，多入口配置
+    entry: {
+        index: path.resolve(__dirname, '../app/index/index.js')
+    },
     // 输出配置
     output: {
         path: path.resolve(__dirname, '../output/static'), // 指定打包文件的路径

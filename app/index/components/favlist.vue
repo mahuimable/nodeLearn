@@ -1,7 +1,6 @@
 <template>
     <div>
-        <div v-for="n in 10">div</div>
-        测试
+        首页组件热加载
     </div>
 </template>
 

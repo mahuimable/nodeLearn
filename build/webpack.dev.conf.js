@@ -13,7 +13,7 @@ config.output.publicPath = '/'
 config.plugins = [
     // 添加三个插件
     new webpack.HotModuleReplacementPlugin(),
-    // new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
 
     new htmlWebpackPlugin({
         filename: 'app/index/index.html',
@@ -21,5 +21,13 @@ config.plugins = [
         inject: true
     })
 ]
+
+// 动态向入口配置中注入 webpack-hot-middleware/client
+// var devClient = 'webpack-hot-middleware/client'
+var devClient = './build/dev-client'
+Object.keys(config.entry).forEach((name, i) => {
+    var extras = [devClient]
+    config.entry[name] = extras.concat(config.entry[name])
+})
 
 module.exports = config
