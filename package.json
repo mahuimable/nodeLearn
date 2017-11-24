@@ -1,9 +1,11 @@
 {
-  "name": "爱又米技术社区",
+  "name": "aym-blog",
   "version": "1.0.0",
   "description": "爱又米内部的技术交流网站",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --display-modules --display-chunks --config build/webpack.prod.conf.js",
+    "dev": "node ./build/dev-server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -16,7 +18,6 @@
     "config-lite": "^2.1.0",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^2.0.0",
-    "css-loader": "^0.28.7",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "express-formidable": "^1.0.0",
@@ -38,7 +39,10 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-runtime": "^5.8.38",
     "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
     "html-webpack-plugin": "^2.30.1",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
     "vue-hot-reload-api": "^2.2.3",
     "vue-html-loader": "^1.2.4",
     "vue-style-loader": "^3.0.3",
