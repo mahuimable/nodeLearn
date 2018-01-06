@@ -29,10 +29,10 @@
 <style lang="scss">
     .form-box {
         position: absolute;
-        top: 30%;
+        top: 40%;
         left: 50%;
-        transform: translate(-80%, -50%);
-        -webkit-transform: translate(-80%, -50%);
+        transform: translate(-60%, -50%);
+        -webkit-transform: translate(-60%, -50%);
 
         .field {
             font-size: 13px;
