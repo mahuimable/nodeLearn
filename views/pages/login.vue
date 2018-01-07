@@ -11,7 +11,8 @@
             </div>
             <div class="field">
                 <a href="javascript:;" class="btn">登录</a>
-                <a href="javascript:;" class="btn">注册</a>
+                <!-- <a href="javascript:;" class="btn">注册</a> -->
+                <router-link :to="{name: 'register'}" class="btn">注册</router-link>
             </div>
         </div>
     </div>

@@ -7,7 +7,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
     // 入口文件，多入口配置
     entry: {
-        index: path.resolve(__dirname, '../views/pages/entry/main.js'),
+        index: path.resolve(__dirname, '../views/entry/main.js'),
         vendors: [
             'Vue'
         ]
@@ -57,12 +57,5 @@ module.exports = {
                 // loader: 'style!css'
             }
         ]
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-            filename: '../index.html',
-            template: path.resolve(__dirname, '../views/pages/index.html'),
-            inject: true
-        })
-    ]
+    }
 }
