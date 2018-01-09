@@ -52,11 +52,11 @@
             input::-webkit-input-placeholder {
                 padding-left: 12px;
                 font-size: 11px;
-                color: #222;
+                color: #222229;
             }
             input:-moz-placeholder {
                 font-size: 11px;
-                color: #222;
+                color: #222229;
             }
 
             .btn {

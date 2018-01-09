@@ -1,6 +1,7 @@
 /**
  * 该配置文件主要用于在本地开发环境下跑node服务，端口号为8888
  */
+
 var express = require('express')
 var webpack = require('webpack')
 var config = require('./webpack.dev.conf')
@@ -37,6 +38,13 @@ compiler.plugin('compilation', (compilation) => {
 // 注册中间件
 app.use(devMiddleware)
 app.use(hotMiddleware)
+
+// 连接数据库
+var config = require('config-lite')(__dirname)
+var Mongolass = require('mongolass')
+var mongolass = new Mongolass()
+
+mongolass.connect(config.mongodb)
 
 //监听8888端口，开启服务器
 app.listen(8888, (err) => {
